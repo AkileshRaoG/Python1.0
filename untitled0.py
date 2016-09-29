@@ -20,7 +20,7 @@ else:
 """
 x = 25
 epsilon = 0.01
-step = 0.1
+step = 0.1dssdg
 guess = 0.0
 
 while guess <= x:
