@@ -19,6 +19,7 @@ print_all(current_file)
 
 print "Let's rewind."
 rewind(current_file)
+print
 
 print "Let's print 3 lines: "
 
