@@ -1,13 +1,13 @@
 
 from scapy.all import *
 
-p = rdpcap("C:\\Users\\raoga3\\Desktop\\Rao\\pcaps\\packet-000000014.pcap")
+p = rdpcap("C:\\Users\\raoga3\\Desktop\\Rao\\pcaps\\x11_lua.pcap")
 s = p.sessions()
 d=[]
 for k in s:
-    if 'SMTP' in k:
+    if 'TCP' in k:
         d.append(s[k])
-pktdump = PcapWriter("smtp_packet1.pcap", append=True, sync=True)
+pktdump = PcapWriter("C:\\Users\\raoga3\\Desktop\\Rao\\pcaps\\smtp_packet1.pcap", append=True, sync=True)
 
 for i in d:
     pktdump.write(i)
